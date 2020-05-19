@@ -5,4 +5,5 @@ require File.expand_path("config/application", __dir__)
 
 ManualsFrontend::Application.load_tasks
 
+Rake::Task[:default].clear
 task default: [:lint, :spec, "jasmine:ci"]
