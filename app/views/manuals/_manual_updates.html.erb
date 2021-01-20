@@ -1,8 +1,11 @@
 <div class='manual-body' id="content">
   <article aria-labelledby="section-title">
-    <h1 id="section-title" class='section-title'>
-      <span class='title'>Updates: <%= presented_manual.title %></span>
-    </h1>
+    <%= render "govuk_publishing_components/components/heading", {
+      text: "Updates: #{presented_manual.title}",
+      font_size: "m",
+      id: "section-title",
+      heading_level: 1,
+    } %>
     <div class='section-content'>
     <% presented_manual.change_notes.by_year.each do |year, updates_by_year| %>
       <div class='js-collapsible-collection subsection-collection'>
